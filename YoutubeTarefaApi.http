@@ -1,0 +1,6 @@
+@YoutubeTarefaApi_HostAddress = http://localhost:5123
+
+GET {{YoutubeTarefaApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini YouTube</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+    <div class="logo">MiniYouTube</div>
+    <input type="text" id="searchInput" placeholder="Buscar canais ou vídeos..." />
+    <button id="searchButton">Buscar</button>
+</header>
+
+<main>
+    <section id="videoPlayerSection">
+        <div class="video-player">
+            <iframe
+                id="videoFrame"
+                width="800"
+                height="450"
+                src=""
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+        </div>
+        <div class="video-info">
+            <h1 id="videoTitulo">Título do vídeo</h1>
+            <p id="videoCanal" class="channel-name">Canal: <span></span></p>
+            <p id="videoDescricao">Descrição do vídeo</p>
+            <div class="video-actions">
+                <button id="btnLike">👍 Curtir <span id="likeCount">0</span></button>
+                <button id="btnEditar" hidden>✏️ Editar</button>
+                <button id="btnExcluir" hidden>🗑️ Excluir</button>
+            </div>
+        </div>
+
+        <section id="commentsSection">
+            <h2>Comentários</h2>
+            <form id="commentForm">
+                <input type="text" id="autorComentario" placeholder="Seu nome" required />
+                <textarea id="textoComentario" placeholder="Escreva um comentário..." required></textarea>
+                <button type="submit">Enviar comentário</button>
+            </form>
+            <div id="commentList"></div>
+        </section>
+    </section>
+
+    <aside id="videoListSection">
+        <h2>Vídeos</h2>
+        <div id="videoList" class="video-list"></div>
+    </aside>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

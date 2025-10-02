@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\YoutubeTarefaApi.props" />
+</Project>

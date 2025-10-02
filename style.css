@@ -1,0 +1,224 @@
+/* Reset simples */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f9f9f9;
+    color: #212121;
+}
+
+header {
+    background-color: #202020;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+header input[type="text"] {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 2px;
+    border: none;
+    font-size: 1rem;
+}
+
+header button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+header button:hover {
+    background-color: #cc0000;
+}
+
+main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+#videoPlayerSection {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-player iframe {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 4px;
+    background: black;
+}
+
+.video-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.channel-name {
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #606060;
+}
+
+.video-info p {
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.video-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #606060;
+    transition: color 0.3s ease;
+}
+
+.video-actions button:hover {
+    color: #ff0000;
+}
+
+#commentsSection {
+    margin-top: 20px;
+}
+
+#commentsSection h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+#commentForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#commentForm input,
+#commentForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+#commentForm button {
+    width: 150px;
+    padding: 10px;
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#commentForm button:hover {
+    background-color: #cc0000;
+}
+
+#commentList .comment {
+    background: white;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.1);
+}
+
+.comment .meta {
+    font-size: 0.8rem;
+    color: #606060;
+    margin-bottom: 6px;
+}
+
+.comment .texto {
+    font-size: 1rem;
+}
+
+#videoListSection {
+    flex: 1;
+    max-width: 320px;
+    background: white;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+    height: fit-content;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+#videoListSection h2 {
+    margin-bottom: 10px;
+}
+
+.video-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.video-card {
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    padding: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.video-card:hover {
+    background-color: #f1f1f1;
+    border-color: #ccc;
+}
+
+.video-card h3 {
+    font-size: 1rem;
+    color: #212121;
+    margin-bottom: 5px;
+}
+
+.video-card small {
+    color: #606060;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    #videoPlayerSection {
+        width: 100%;
+    }
+    #videoListSection {
+        max-width: 100%;
+        max-height: 200px;
+        margin-top: 20px;
+    }
+}
