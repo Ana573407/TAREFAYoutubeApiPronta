@@ -5,7 +5,7 @@ const videosSimulados = [
     nomeCanal: "Katy Perry",
     ano: 2013,
     descricao: "Música oficial de 'Roar' da Katy Perry",
-    url: "CevxZvSJLk8", // vídeo oficial no YouTube
+    url: "CevxZvSJLk8", 
     likes: 5,
   },
   {
@@ -128,7 +128,6 @@ function enviarComentario(event) {
   carregarComentarios(videoAtual.id);
 }
 
-// --- Modal para editar título e descrição ---
 
 function criarModalEditar() {
   const modalHTML = `
@@ -177,9 +176,10 @@ function salvarEdicao() {
   videoAtual.titulo = novoTitulo;
   videoAtual.descricao = novaDescricao;
 
-  // Atualizar exibição
+
   selecionarVideo(videoAtual);
   popularListaVideos(videosSimulados);
 
   fecharModalEditar();
 }
+
