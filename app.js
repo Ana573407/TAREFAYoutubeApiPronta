@@ -14,7 +14,7 @@ const videosSimulados = [
     nomeCanal: "Katy Perry",
     ano: 2013,
     descricao: "Videoclipe oficial da música 'Dark Horse' de Katy Perry com Juicy J.",
-    url: "0KSOMA3QBU0", // ID do vídeo Dark Horse
+    url: "0KSOMA3QBU0", 
     likes: 3,
   },
 ];
@@ -128,7 +128,7 @@ function enviarComentario(event) {
   carregarComentarios(videoAtual.id);
 }
 
-// --- Modal para editar título e descrição ---
+
 
 function criarModalEditar() {
   const modalHTML = `
@@ -177,9 +177,10 @@ function salvarEdicao() {
   videoAtual.titulo = novoTitulo;
   videoAtual.descricao = novaDescricao;
 
-  // Atualizar exibição
+
   selecionarVideo(videoAtual);
   popularListaVideos(videosSimulados);
 
   fecharModalEditar();
 }
+
