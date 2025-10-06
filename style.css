@@ -1,4 +1,4 @@
-/* Reset simples */
+
 * {
     margin: 0;
     padding: 0;
@@ -208,7 +208,7 @@ main {
     color: #606060;
 }
 
-/* Responsivo */
+
 @media (max-width: 900px) {
     main {
         flex-direction: column;
@@ -222,3 +222,4 @@ main {
         margin-top: 20px;
     }
 }
+
